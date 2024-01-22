@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router()
-const {handler_getDogs_api} = require('../../handlers/index')
+const {handler_loadDogs, handler_getDogsApi,} = require('../../handlers/index')
 
 
-// router.get("/api",handler_getDogs_api)
+///api/dogs/loadatabase carga los datos en la BD
+router.get("/",handler_loadDogs);
 
-// router.get("/:id", handler_getDog_id)
-router.get("/",handler_getDogs_api)
-
+//pide los datos a la api   api/dogs/loadatabase/thedogsapi
+router.get("/thedogsapi", handler_getDogsApi);
 
 module.exports = router

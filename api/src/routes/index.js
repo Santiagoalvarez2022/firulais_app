@@ -8,6 +8,7 @@ const index_Router_Temperaments = require('./routesTemperaments/index')
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
+
 router.use("/dogs",index_Router_Dogs )
 router.use("/temperaments",index_Router_Temperaments )
 

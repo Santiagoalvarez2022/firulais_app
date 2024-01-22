@@ -10,7 +10,7 @@ const get_all = async () =>{
          attributes : ['name'],
          trougth :{
            attributes : ["dog_temperament"]
-         }
+         } 
        }
      })
 
