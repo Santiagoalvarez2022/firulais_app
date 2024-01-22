@@ -18,28 +18,40 @@ module.exports = (sequelize) => {
     alturaMax: {
       type: DataTypes.STRING,
       allowNull :false,
+      defaultValue : ""
+      
     },
     alturaMin: {
       type: DataTypes.STRING,
       allowNull :false,
+      defaultValue : ""
+
     },
 
     pesoMax: {
       type: DataTypes.STRING,
       allowNull :false,
+      defaultValue : ""
+
     },
     pesoMin: {
       type: DataTypes.STRING,
       allowNull :false,
+      defaultValue : ""
+
     },
  
     vidaMax: {
       type: DataTypes.STRING,
       allowNull :false,
+      defaultValue : ""
+
     },
     vidaMin: {
       type: DataTypes.STRING,
-      allowNull :false,
+      allowNull :false, 
+      defaultValue : ""
+
     },
 
     image : {

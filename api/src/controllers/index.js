@@ -2,7 +2,7 @@
 
 
 const get_data_api= require('./dogs/api/get_data_api')
-
+const get_loadData = require("./dogs/api/get_loadData")
 const get_all = require('./dogs/bd/get_all')
 const post_dog = require('./dogs/bd/post_dog')
 const get_allForName = require('./dogs/bd/get_allForName')
@@ -11,6 +11,7 @@ const get_temperaments = require('./temperaments/get_temperaments')
 
 module.exports = {
     get_data_api,
+    get_loadData,
     get_all,
     post_dog,
     get_allForName,

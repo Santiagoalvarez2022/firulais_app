@@ -11,8 +11,12 @@ const router = express.Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-router.use("/api",get_dataApi )
+//esta ruta va a cargar todos los perros en la base de datos 
+router.use("/loadatabase",get_dataApi )
 
+
+
+//en vez de pegarle a la api va a pegarle a la bd 
 router.use("/", get_all)
 
 router.use("/", post_dog)
