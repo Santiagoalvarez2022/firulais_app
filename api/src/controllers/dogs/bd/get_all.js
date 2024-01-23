@@ -13,6 +13,7 @@ const get_all = async () =>{
          } 
        }
      })
+     
 
 
     dogs_db = dogs_db.map(dog =>{

@@ -22,10 +22,3 @@ const get_by_Id = async (id, sourse) => {
 
 module.exports = get_by_Id;
 
-/*include : {
-         model :Temperament,
-         attributes : ['name'],
-         trougth :{
-           attributes : ["dog_temperament"]
-         }
-       }*/

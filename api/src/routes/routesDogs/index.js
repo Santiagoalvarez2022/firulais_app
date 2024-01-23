@@ -4,7 +4,7 @@ const express = require('express')
 
 const get_all = require('./route_getAll')
 const post_dog= require('./route_postDog')
-const get_dataApi =require('./route_getDataApi')
+const verifyDogRecords = require('../../midlewares/verifyRecords');
 // Ejemplo: const authRouter = require('./auth.js');
 const router = express.Router();
 
@@ -12,12 +12,11 @@ const router = express.Router();
 // Ejemplo: router.use('/auth', authRouter);
 
 //esta ruta va a cargar todos los perros en la base de datos 
-router.use("/loadatabase",get_dataApi )
 
 
 
 //en vez de pegarle a la api va a pegarle a la bd 
-router.use("/", get_all)
+router.use("/", verifyDogRecords, get_all)
 
 router.use("/", post_dog)
 

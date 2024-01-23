@@ -10,4 +10,7 @@ const handler_getTemperaments = async(req,res) =>{
     }
     
 }
+
+
+
 module.exports = handler_getTemperaments;

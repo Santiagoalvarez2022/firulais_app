@@ -12,6 +12,7 @@ const router = express.Router();
 
 router.use("/", get_temperaments)
 
+
 //DogsRoutes esta importado en app.js todas las rutas de dogs
 
 module.exports = router;

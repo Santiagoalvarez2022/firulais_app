@@ -1,6 +1,7 @@
 const {get_allForName,get_all} = require("../../controllers/index")
 
 const handler_getDogs = async (req, res) =>{
+        console.log("=============> estoy en el controller");
     const {name} = req.query
     try {
             if(name){
@@ -9,10 +10,12 @@ const handler_getDogs = async (req, res) =>{
                     return res.status(200).json(result)    
             }
             else{
-                    //traigo los dato de la api y la db
-                    const result = await get_all()
-                    //envio los datos 
-                    return res.status(200).json(result)
+                //debo 
+                    
+                //traigo los dato de la db
+                const result = await get_all()
+                //envio los datos 
+                return res.status(200).json(result)
     
             }
             
