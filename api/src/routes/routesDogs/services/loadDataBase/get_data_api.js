@@ -1,7 +1,7 @@
 const  axios  = require("axios");
 require("dotenv").config
 const{API_KEY} =process.env 
-const loadDataBase = require("../../../utils/loadDataBase/loadDataBase");
+const loadDataBase = require("./loadDataBase");
 
 
 //MODULARIZO EN UNA FUNCION LA PETICION A LA API y FILTRADO DE LAS PROPIEDADES NECESARIAS, PARA NO REPETIR CODIGO EN LOS CONTROLLERS

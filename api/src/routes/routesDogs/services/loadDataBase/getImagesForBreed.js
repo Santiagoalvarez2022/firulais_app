@@ -8,7 +8,7 @@ function stopExecution() {
     setTimeout(function() {
       console.log('Fin de la pausa. Continuando la ejecución');
       // Aquí puedes colocar el código que quieres ejecutar después de la pausa
-    }, 20000);
+    }, 60000);
   }
   
   
@@ -46,11 +46,15 @@ const getImagesForBreed = async (list) =>{
     const dogs1 = await requestByParts(0,42,list,"1ra parte Lista");
     //pauso la ejecucion unos segundo para poder enviarle otras peticiones a la api
     stopExecution()
+    stopExecution()
+    
     //parte2
     const dogs2 = await requestByParts(42,84,list,"2da parte lista");
     stopExecution()
+    stopExecution()
     
     const dogs3 = await requestByParts(84,126,list,"3ra parte lista");
+    stopExecution()
     stopExecution()
     
     const dogs4 = await requestByParts(126,list.length,list,"4ta parte lista");

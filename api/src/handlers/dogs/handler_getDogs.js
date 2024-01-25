@@ -1,4 +1,5 @@
-const {get_allForName,get_all} = require("../../controllers/index")
+const {get_allForName} = require("../../controllers/index")
+const get_allDogsBD = require("../../utils/get_allDogsDB")
 
 const handler_getDogs = async (req, res) =>{
     const {name} = req.query
@@ -9,10 +10,12 @@ const handler_getDogs = async (req, res) =>{
                     return res.status(200).json(result)    
             }
             else{
-                    //traigo los dato de la api y la db
-                    const result = await get_all()
-                    //envio los datos 
-                    return res.status(200).json(result)
+                //debo 
+                    
+                //traigo los dato de la db
+                const result = await get_allDogsBD()
+                //envio los datos 
+                return res.status(200).json(result)
     
             }
             
