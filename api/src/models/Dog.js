@@ -34,7 +34,7 @@ module.exports = (sequelize) => {
       defaultValue : ""
 
     },
-    pesoMin: {
+    pesoMin: { 
       type: DataTypes.STRING,
       allowNull :false,
       defaultValue : ""
@@ -55,6 +55,12 @@ module.exports = (sequelize) => {
     },
 
     image : {
+      type : DataTypes.STRING,
+    },
+    temperaments : {
+      type : DataTypes.STRING,
+    },
+    type : {
       type : DataTypes.STRING,
     },
   },

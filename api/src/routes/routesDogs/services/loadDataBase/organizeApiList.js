@@ -6,7 +6,6 @@ const organizedApiList= async ()=>{
     
     try {
       const {data} = await  axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
-       
       let res = data.map( obj =>{
 
 
@@ -65,16 +64,16 @@ const organizedApiList= async ()=>{
           pesoMin,
           vidaMax,
           vidaMin,
-          temperaments : temperament,
+          temperament,
           reference_image_id,
           type:"api"
       }
       }) 
-
+      console.log("termine organizeapilist sin problemas");
     return res 
 
     } catch (error) {
-      return {error:error.message}
+      return {error:"error en organizeApiLlist"}
     }
    
     

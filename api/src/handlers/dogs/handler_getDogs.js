@@ -1,7 +1,7 @@
-const {get_allForName,get_all} = require("../../controllers/index")
+const {get_allForName} = require("../../controllers/index")
+const get_allDogsBD = require("../../utils/get_allDogsDB")
 
 const handler_getDogs = async (req, res) =>{
-        console.log("=============> estoy en el controller");
     const {name} = req.query
     try {
             if(name){
@@ -13,7 +13,7 @@ const handler_getDogs = async (req, res) =>{
                 //debo 
                     
                 //traigo los dato de la db
-                const result = await get_all()
+                const result = await get_allDogsBD()
                 //envio los datos 
                 return res.status(200).json(result)
     

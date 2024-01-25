@@ -1,4 +1,5 @@
-const {Dog, Temperament} = require('../../../db')
+const {Dog, Temperament} = require('../../../db');
+const get_allDogsBD = require('../../../utils/get_allDogsDB');
 
 const post_dog = async (data) =>{
     //validation of required fields
@@ -24,8 +25,14 @@ const post_dog = async (data) =>{
        }
 
     }
+
+
   
-    return {...newrace.dataValues, ...{temperaments}}
+  const newdog =  {...newrace.dataValues, ...{temperaments}}
+  if (newdog) {
+    return await get_allDogsBD()
+  } 
+  throw Error("ocurrio un error al crearse la raza")
 }
 
 module.exports = post_dog;

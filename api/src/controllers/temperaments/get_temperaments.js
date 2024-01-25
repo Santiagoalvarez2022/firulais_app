@@ -38,8 +38,7 @@ const func_all_temperaments = (arrayOftemperaments) =>{
 //controller
 const get_temperaments = async () =>{
   //peticion a la api
-  const temperaments = await Temperament.findAll()
-  if(!temperaments.length){
+  
       const {data} = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${apikey}`)
  
       const arrayOftemperaments =  func_arrayOftemperaments(data)
@@ -64,10 +63,8 @@ const get_temperaments = async () =>{
       console.log("creo los registross ");
 
       return temps_db
-    } else {
-      console.log("ya estan cargados asi que mando los de la bd ");
-      return temperaments;
-    }
+   
+  
 }
 
 

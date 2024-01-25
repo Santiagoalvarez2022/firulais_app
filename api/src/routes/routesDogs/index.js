@@ -5,6 +5,7 @@ const express = require('express')
 const get_all = require('./route_getAll')
 const post_dog= require('./route_postDog')
 const verifyDogRecords = require('../../midlewares/verifyRecords');
+const loadDataBase = require('./services/loadDataBase/loadDataBase');
 // Ejemplo: const authRouter = require('./auth.js');
 const router = express.Router();
 
@@ -14,11 +15,11 @@ const router = express.Router();
 //esta ruta va a cargar todos los perros en la base de datos 
 
 
-
+// router.get("/createjson",loadDataBase)
+ 
 //en vez de pegarle a la api va a pegarle a la bd 
-router.use("/", verifyDogRecords, get_all)
-
-router.use("/", post_dog)
+ router.use("/", verifyDogRecords, get_all)
+ router.use("/", post_dog)
 
 
 //DogsRoutes esta importado en app.js todas las rutas de dogs
